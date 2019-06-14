@@ -1,0 +1,31 @@
+version: '2.2'
+services:
+  nginx1:
+    build:
+      context: nginx1
+    image: local:nginx1
+    privileged: true
+    cpu_count: 2
+    mem_limit: '4G'
+    hostname: nginx1
+    ports:
+    - "8000:8000"
+
+  nginx2:
+    build:
+      context: nginx2
+    image: local:nginx2
+    privileged: true
+    cpu_count: 2
+    mem_limit: '4G'
+    hostname: nginx2
+
+  nginx3:
+    build:
+      context: nginx3
+    image: local:nginx3
+    privileged: true
+    cpu_count: 2
+    mem_limit: '4G'
+    hostname: nginx3
+
